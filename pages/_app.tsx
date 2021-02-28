@@ -6,7 +6,7 @@ import React, { useEffect } from "react";
 
 import theme from "theme";
 
-// import "styles/globals.css";
+import "styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {

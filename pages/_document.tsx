@@ -15,6 +15,14 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Quattrocento&display=swap"
+          />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap"
+          />
         </Head>
         <body>
           <Main />
