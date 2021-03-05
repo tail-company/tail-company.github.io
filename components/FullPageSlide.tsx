@@ -21,7 +21,9 @@ export default function FullPageSlide(props) {
       <Box>
         <Toolbar className={classes.toolbarTop} />
       </Box>
-      <Box flexGrow={1}>{props.children}</Box>
+      <Box flexGrow={1} height={0}>
+        {props.children}
+      </Box>
       <Box>
         <div className={classes.spacer} />
         <Toolbar />

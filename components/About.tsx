@@ -54,7 +54,7 @@ export default function About() {
             About
           </Typography>
         </Box>
-        <Box flexGrow={1} alignItems="center">
+        <Box flexGrow={1} height={0} alignItems="center">
           <Box width="100%" height="100%" display="flex" alignItems="center">
             <Grid container spacing={0}>
               <Grid item xs={6}>

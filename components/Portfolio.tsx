@@ -70,7 +70,7 @@ export default function Portfolio() {
             Portfolio
           </Typography>
         </Box>
-        <Box flexGrow={1} alignItems="center">
+        <Box flexGrow={1} height={0} alignItems="center">
           <Box width="100%" height="100%" display="flex" alignItems="center">
             <Grid container spacing={3}>
               <Grid item xs={12}>
