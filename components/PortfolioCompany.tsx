@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from "@material-ui/core";
+import { Box, Button, Typography } from "@material-ui/core";
 import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Image from "next/image";

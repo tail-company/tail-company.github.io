@@ -7,6 +7,15 @@ import PeopleMember from "components/PeopleMember";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    content: {
+      position: "relative",
+    },
+    desc: {
+      bottom: 0,
+      left: 0,
+      position: "absolute",
+      zIndex: -1,
+    },
     h1: {
       fontSize: 25,
     },
@@ -18,8 +27,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     title: {
       position: "absolute",
-      top: theme.spacing(3),
       right: 0,
+      top: theme.spacing(3),
     },
   })
 );
@@ -47,35 +56,27 @@ export default function People() {
         </Box>
         <Box flexGrow={1} alignItems="center">
           <Box width="100%" height="100%" display="flex" alignItems="center">
-            <Grid container spacing={3}>
-              <Grid item xs={6}>
-                <Box width="100%" height="100%" display="flex">
-                  <Box alignSelf="flex-end">
-                    <Typography variant="h2" className={classes.h2}>
-                      Medical
-                      <br />
-                      Doctors
-                      <br />
-                      <strong>
-                        Entrepreneurship<span className="yellow">.</span>
-                      </strong>
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item xs={6}>
-                <Box
-                  width="100%"
-                  height="100%"
-                  display="flex"
-                  justifyContent="flex-end"
-                >
-                  <Box alignSelf="center">
-                    <PeopleMember />
-                  </Box>
-                </Box>
-              </Grid>
-            </Grid>
+            <Box
+              width="100%"
+              display="flex"
+              justifyContent="flex-end"
+              className={classes.content}
+            >
+              <Box className={classes.desc}>
+                <Typography variant="h2" className={classes.h2}>
+                  Medical
+                  <br />
+                  Doctors
+                  <br />
+                  <strong>
+                    Entrepreneurship<span className="yellow">.</span>
+                  </strong>
+                </Typography>
+              </Box>
+              <Box alignSelf="center">
+                <PeopleMember />
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Box>
