@@ -1,8 +1,7 @@
-import { Box, Button, Link, Typography } from "@material-ui/core";
+import { Box, Link, Typography } from "@material-ui/core";
 import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
 import TrendingFlatIcon from "@material-ui/icons/TrendingFlat";
 import clsx from "clsx";
-import Image from "next/image";
 import React from "react";
 
 interface PeopleMemberProps {

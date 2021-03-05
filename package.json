@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev",
+    "export": "next export -o docs",
+    "server": "python3 -m http.server -d docs",
     "start": "next start"
   },
   "dependencies": {

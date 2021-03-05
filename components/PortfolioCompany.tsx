@@ -1,7 +1,6 @@
 import { Box, Button, Typography } from "@material-ui/core";
 import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
-import Image from "next/image";
 import React from "react";
 
 interface PortfolioCompanyProps {
@@ -27,6 +26,11 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingLeft: theme.spacing(3),
       paddingRight: theme.spacing(3),
     },
+    logo: {
+      height: "100%",
+      objectFit: "scale-down",
+      width: "100%",
+    },
   })
 );
 
@@ -42,12 +46,7 @@ export default function PortfolioCompany({
     <Box>
       <Box width="100%" height={150} display="flex" justifyContent="center">
         <Box alignSelf="center" width="100%" height="100%" position="relative">
-          <Image
-            src={imageSrc}
-            alt={name}
-            layout="fill"
-            objectFit="scale-down"
-          />
+          <img src={imageSrc} alt={name} className={classes.logo} />
         </Box>
       </Box>
       <Box width="100%" height={150} display="flex">
