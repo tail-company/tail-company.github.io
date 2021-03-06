@@ -29,9 +29,12 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "transparent",
     },
     menu: {
-      fontSize: 15,
+      fontSize: 15 * 0.75,
       fontWeight: "bold",
       textTransform: "none",
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 15,
+      },
     },
     selected: {
       color: "#f8e00e",
@@ -39,10 +42,19 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       cursor: "pointer",
       flexGrow: 1,
-      fontSize: 30,
+      fontSize: 30 * 0.75,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 30,
+      },
     },
     toolbar: {
-      minHeight: 75,
+      minHeight: 75 * 0.6,
+      [theme.breakpoints.up("sm")]: {
+        minHeight: 75 * 0.8,
+      },
+      [theme.breakpoints.up("md")]: {
+        minHeight: 75,
+      },
     },
   })
 );

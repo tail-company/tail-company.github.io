@@ -6,16 +6,33 @@ import FullPageSlide from "components/FullPageSlide";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    h1: {
-      fontSize: 100,
-      marginBottom: theme.spacing(3),
-    },
-    h2: {
-      fontSize: 34,
-      marginBottom: theme.spacing(6),
-    },
     caption: {
       fontSize: 14,
+    },
+    content: {
+      [theme.breakpoints.up("md")]: {
+        paddingLeft: theme.spacing(16),
+      },
+    },
+    h1: {
+      fontSize: 100 * 0.75 * 0.65,
+      marginBottom: theme.spacing(3),
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 100 * 0.75,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 100,
+      },
+    },
+    h2: {
+      fontSize: 34 * 0.75 * 0.65,
+      marginBottom: theme.spacing(6),
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 34 * 0.75,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 34,
+      },
     },
   })
 );
@@ -26,7 +43,7 @@ export default function Home() {
   return (
     <FullPageSlide>
       <Box width="100%" height="100%" display="flex">
-        <Box alignSelf="center" pl={16}>
+        <Box alignSelf="center" className={classes.content}>
           <Typography variant="h1" className={classes.h1}>
             The Art Is Long,
           </Typography>

@@ -8,10 +8,22 @@ const useStyles = makeStyles((theme: Theme) =>
       height: 1,
     },
     toolbarBottom: {
-      minHeight: 48,
+      minHeight: 48 * 0.6,
+      [theme.breakpoints.up("sm")]: {
+        minHeight: 48 * 0.8,
+      },
+      [theme.breakpoints.up("md")]: {
+        minHeight: 48,
+      },
     },
     toolbarTop: {
-      minHeight: 75,
+      minHeight: 75 * 0.6,
+      [theme.breakpoints.up("sm")]: {
+        minHeight: 75 * 0.8,
+      },
+      [theme.breakpoints.up("md")]: {
+        minHeight: 75,
+      },
     },
   })
 );

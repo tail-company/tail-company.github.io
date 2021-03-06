@@ -16,12 +16,21 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingRight: 0,
     },
     copyright: {
-      fontSize: 10.5,
+      fontSize: 14 * 0.75,
       fontWeight: "bold",
       width: "100%",
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 14,
+      },
     },
     toolbar: {
-      minHeight: 48,
+      minHeight: 48 * 0.6,
+      [theme.breakpoints.up("sm")]: {
+        minHeight: 48 * 0.8,
+      },
+      [theme.breakpoints.up("md")]: {
+        minHeight: 48,
+      },
     },
   })
 );
