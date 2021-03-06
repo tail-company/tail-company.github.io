@@ -8,19 +8,36 @@ import PortfolioCompany from "components/PortfolioCompany";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     h1: {
-      fontSize: 19,
+      fontSize: 19 * 0.75,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 19,
+      },
     },
     h2: {
-      fontSize: 68,
-      marginBottom: theme.spacing(6),
+      fontSize: 68 * 0.75 * 0.65,
+      marginBottom: theme.spacing(6 * 0.75 * 0.65),
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 68 * 0.75,
+        marginBottom: theme.spacing(6 * 0.75),
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 68,
+        marginBottom: theme.spacing(6),
+      },
     },
     root: {
       position: "relative",
     },
     title: {
       position: "absolute",
-      top: theme.spacing(2),
+      top: theme.spacing(2 * 0.6),
       right: 0,
+      [theme.breakpoints.up("sm")]: {
+        top: theme.spacing(2 * 0.8),
+      },
+      [theme.breakpoints.up("md")]: {
+        top: theme.spacing(2),
+      },
     },
   })
 );
@@ -72,14 +89,14 @@ export default function Portfolio() {
         </Box>
         <Box flexGrow={1} height={0} alignItems="center">
           <Box width="100%" height="100%" display="flex" alignItems="center">
-            <Grid container spacing={3}>
+            <Grid container spacing={1}>
               <Grid item xs={12}>
                 <Typography variant="h2" align="center" className={classes.h2}>
                   We are medical accelerator<span className="yellow">.</span>
                 </Typography>
               </Grid>
               {[...Array(companyList.length).keys()].map((companyIndex) => (
-                <Grid item md={4} key={companyIndex}>
+                <Grid item xs={12} sm={6} md={4} key={companyIndex}>
                   <Box
                     width="100%"
                     height="100%"

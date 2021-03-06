@@ -1,4 +1,4 @@
-import { Box, Typography } from "@material-ui/core";
+import { Box, Hidden, Typography } from "@material-ui/core";
 import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
 import React, { useState } from "react";
 
@@ -17,18 +17,33 @@ const useStyles = makeStyles((theme: Theme) =>
       zIndex: -1,
     },
     h1: {
-      fontSize: 19,
+      fontSize: 19 * 0.75,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 19,
+      },
     },
     h2: {
-      fontSize: 72,
+      fontSize: 72 * 0.75 * 0.65,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 72 * 0.75,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 72,
+      },
     },
     root: {
       position: "relative",
     },
     title: {
       position: "absolute",
+      top: theme.spacing(2 * 0.6),
       right: 0,
-      top: theme.spacing(2),
+      [theme.breakpoints.up("sm")]: {
+        top: theme.spacing(2 * 0.8),
+      },
+      [theme.breakpoints.up("md")]: {
+        top: theme.spacing(2),
+      },
     },
   })
 );
@@ -124,16 +139,18 @@ export default function People() {
                   </strong>
                 </Typography>
               </Box>
-              <Box alignSelf="center">
-                <PeopleMember
-                  name={memberList[memberIndex].name}
-                  position={memberList[memberIndex].position}
-                  career={memberList[memberIndex].career}
-                  imageSrc={memberList[memberIndex].imageSrc}
-                  onPrevClick={onPrevClick}
-                  onNextClick={onNextClick}
-                />
-              </Box>
+              <Hidden xsDown>
+                <Box alignSelf="center">
+                  <PeopleMember
+                    name={memberList[memberIndex].name}
+                    position={memberList[memberIndex].position}
+                    career={memberList[memberIndex].career}
+                    imageSrc={memberList[memberIndex].imageSrc}
+                    onPrevClick={onPrevClick}
+                    onNextClick={onNextClick}
+                  />
+                </Box>
+              </Hidden>
             </Box>
           </Box>
         </Box>

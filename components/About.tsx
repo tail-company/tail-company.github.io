@@ -8,28 +8,64 @@ import FullPageSlide from "components/FullPageSlide";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     body1: {
-      fontSize: 15,
-      paddingBottom: theme.spacing(2),
+      fontSize: 15 * 0.75 * 0.65,
+      paddingBottom: theme.spacing(2 * 0.75 * 0.65),
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 15 * 0.75,
+        paddingBottom: theme.spacing(2 * 0.75),
+        whiteSpace: "pre-line",
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 15,
+        paddingBottom: theme.spacing(2),
+      },
     },
     h1: {
-      fontSize: 19,
+      fontSize: 19 * 0.75,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 19,
+      },
     },
     h2: {
-      fontSize: 86,
+      fontSize: 86 * 0.75 * 0.65,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 86 * 0.75,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 86,
+      },
     },
     h3: {
-      fontSize: 62,
+      fontSize: 62 * 0.75 * 0.65,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 62 * 0.75,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 62,
+      },
     },
     h3Postposition: {
-      fontSize: 28,
+      fontSize: 28 * 0.75 * 0.65,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 28 * 0.75,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 28,
+      },
     },
     root: {
       position: "relative",
     },
     title: {
       position: "absolute",
-      top: theme.spacing(2),
+      top: theme.spacing(2 * 0.6),
       right: 0,
+      [theme.breakpoints.up("sm")]: {
+        top: theme.spacing(2 * 0.8),
+      },
+      [theme.breakpoints.up("md")]: {
+        top: theme.spacing(2),
+      },
     },
   })
 );
@@ -57,8 +93,8 @@ export default function About() {
         </Box>
         <Box flexGrow={1} height={0} alignItems="center">
           <Box width="100%" height="100%" display="flex" alignItems="center">
-            <Grid container spacing={0}>
-              <Grid item md={6}>
+            <Grid container spacing={3}>
+              <Grid item xs={5}>
                 <Box width="100%" height="100%" display="flex">
                   <Box alignSelf="center">
                     <Typography variant="h2" className={classes.h2}>
@@ -77,7 +113,7 @@ export default function About() {
                   </Box>
                 </Box>
               </Grid>
-              <Grid item md={6}>
+              <Grid item xs={7}>
                 <Box
                   width="100%"
                   height="100%"
@@ -103,10 +139,9 @@ export default function About() {
                     >
                       Digital, AI, Data Science
                       <span className="ko">
-                        가 제시하고 있는 새로운 접근법을 통해
-                        <br />
+                        가 제시하고 있는 새로운 접근법을 통해{"\n"}
                         의학 및 의료산업 전반에 존재하는 비효율과
-                        <br />
+                        {"\n"}
                         가능성에 대한 도전을 장려하고 꿈을 현실화 시키고자
                         합니다.
                       </span>

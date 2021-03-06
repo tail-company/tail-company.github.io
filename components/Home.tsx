@@ -7,7 +7,13 @@ import FullPageSlide from "components/FullPageSlide";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     caption: {
-      fontSize: 14,
+      fontSize: 14 * 0.75 * 0.65,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 14 * 0.75,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 14,
+      },
     },
     content: {
       [theme.breakpoints.up("md")]: {
@@ -16,22 +22,26 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     h1: {
       fontSize: 100 * 0.75 * 0.65,
-      marginBottom: theme.spacing(3),
+      marginBottom: theme.spacing(3 * 0.75 * 0.65),
       [theme.breakpoints.up("sm")]: {
         fontSize: 100 * 0.75,
+        marginBottom: theme.spacing(3 * 0.75),
       },
       [theme.breakpoints.up("md")]: {
         fontSize: 100,
+        marginBottom: theme.spacing(3),
       },
     },
     h2: {
       fontSize: 34 * 0.75 * 0.65,
-      marginBottom: theme.spacing(6),
+      marginBottom: theme.spacing(6 * 0.75 * 0.65),
       [theme.breakpoints.up("sm")]: {
         fontSize: 34 * 0.75,
+        marginBottom: theme.spacing(6 * 0.75),
       },
       [theme.breakpoints.up("md")]: {
         fontSize: 34,
+        marginBottom: theme.spacing(6),
       },
     },
   })

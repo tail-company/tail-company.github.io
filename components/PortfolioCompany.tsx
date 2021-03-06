@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@material-ui/core";
+import { Box, Button, Hidden, Typography } from "@material-ui/core";
 import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import React from "react";
@@ -13,7 +13,8 @@ interface PortfolioCompanyProps {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     body2: {
-      fontFamily: "Noto Serif KR",
+      // NOTE ko 따로 줘도 안되서 추가함
+      fontFamily: "Noto Serif KR, serif",
       fontSize: 12,
       height: 70,
       whiteSpace: "pre-line",
