@@ -7,7 +7,7 @@ const theme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: ["Quattrocento", "Roboto"].join(","),
+    fontFamily: ["Quattrocento", "serif"].join(","),
   },
 });
 

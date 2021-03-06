@@ -1,6 +1,6 @@
-import { Box, Grid, Typography } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
 import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
-import React from "react";
+import React, { useState } from "react";
 
 import FullPageSlide from "components/FullPageSlide";
 import PeopleMember from "components/PeopleMember";
@@ -33,8 +33,59 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+const memberList = [
+  {
+    name: "이호종",
+    position: "Managing Partner",
+    career:
+      "(현)맥스웰피부과 원장\n(현)서울대 의료빅데이터센터\n(전)라임소사이어티 Founder\n(전)무브 CTO\n서울대 의학과 및 대학원",
+    imageSrc: "/photo-hojong.jpg",
+  },
+  {
+    name: "지승범",
+    position: "Managing Partner",
+    career:
+      "(전)화이브라더스코리아 CEO\n(전)화이인베스트먼트 CEO\n(전)KTB Investment\n(전)KPMG FAS",
+    imageSrc: "/photo-jayji.png",
+  },
+  {
+    name: "배영진",
+    position: "Venture Partner",
+    career:
+      "(현)LINE Games CSO\n(전)NextFloor CFO\n(LINE Games 인수)\n(전)MobilFactory Founder\n(NextFloor 인수)",
+    imageSrc: "/photo-bae.jpg",
+  },
+  {
+    name: "이용수",
+    position: "Advisor",
+    career: "Korea/NY Lawyer",
+    imageSrc: "/photo-jjyslee.png",
+  },
+  {
+    name: "박준성",
+    position: "Advisor",
+    career: "Legend Capital MD",
+    imageSrc: "/photo-parkjs.jpg",
+  },
+];
+
 export default function People() {
   const classes = useStyles();
+  const [memberIndex, setMemberIndex] = useState(0);
+
+  const onPrevClick = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (memberIndex > 0) setMemberIndex(memberIndex - 1);
+  };
+
+  const onNextClick = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (memberIndex < memberList.length - 1) setMemberIndex(memberIndex + 1);
+  };
 
   return (
     <FullPageSlide>
@@ -74,7 +125,14 @@ export default function People() {
                 </Typography>
               </Box>
               <Box alignSelf="center">
-                <PeopleMember />
+                <PeopleMember
+                  name={memberList[memberIndex].name}
+                  position={memberList[memberIndex].position}
+                  career={memberList[memberIndex].career}
+                  imageSrc={memberList[memberIndex].imageSrc}
+                  onPrevClick={onPrevClick}
+                  onNextClick={onNextClick}
+                />
               </Box>
             </Box>
           </Box>

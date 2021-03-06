@@ -1,4 +1,4 @@
-import { Container, NoSsr } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import dynamic from "next/dynamic";
 import React, { useRef, useState } from "react";
 import { FullPage, Slide } from "react-full-page";

@@ -5,18 +5,25 @@ import clsx from "clsx";
 import React from "react";
 
 interface PeopleMemberProps {
-  // TODO
+  career?: string;
+  imageSrc?: string;
+  name: string;
+  onNextClick: (e: React.MouseEvent<HTMLElement>) => void;
+  onPrevClick: (e: React.MouseEvent<HTMLElement>) => void;
+  position: string;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     body1: {
-      fontSize: 16,
-      fontWeight: "bold",
+      fontSize: 12,
+      height: 95,
+      marginBottom: theme.spacing(6),
+      whiteSpace: "pre-line",
     },
     body2: {
-      fontSize: 12,
-      marginBottom: theme.spacing(6),
+      fontSize: 16,
+      fontWeight: "bold",
     },
     h3: {
       fontSize: 18,
@@ -42,57 +49,65 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingRight: theme.spacing(1.5),
     },
     photo: {
-      // float: "right",
-      paddingBottom: theme.spacing(2),
-      paddingLeft: theme.spacing(4),
+      borderRadius: 5,
+      height: "100%",
+      objectFit: "cover",
+      width: "100%",
+    },
+    photoBox: {
+      marginBottom: theme.spacing(2),
+      marginLeft: theme.spacing(4),
     },
   })
 );
 
-export default function PeopleMember({}: PeopleMemberProps) {
+export default function PeopleMember({
+  career,
+  imageSrc,
+  name,
+  onNextClick,
+  onPrevClick,
+  position,
+}: PeopleMemberProps) {
   const classes = useStyles();
 
   return (
     <Box display="flex">
       <Box>
         <Typography variant="h3" align="right" className={classes.h3}>
-          <span className="ko">이호종</span>
+          <span className="ko">{name}</span>
         </Typography>
         <Typography variant="h4" align="right" className={classes.h4}>
-          Managing Partner
-        </Typography>
-        <Typography variant="body2" align="right" className={classes.body2}>
-          <span className="ko">
-            맥스웰피부과 원장
-            <br />
-            서울대 의료빅데이터센터
-            <br />
-            라임소사이어티 Founder
-            <br />
-            무브(주) CTO
-            <br />
-            서울대 의학과 및 대학원
-          </span>
+          {position}
         </Typography>
         <Typography variant="body1" align="right" className={classes.body1}>
-          <Link href="#" color="inherit" className={classes.prev}>
+          <span className="ko">{career}</span>
+        </Typography>
+        <Typography variant="body2" align="right" className={classes.body2}>
+          <Link
+            href="#"
+            color="inherit"
+            className={classes.prev}
+            onClick={onPrevClick}
+          >
             <TrendingFlatIcon
               className={clsx(classes.icon, classes.iconPrev)}
             />{" "}
             Prev
           </Link>
           {" / "}
-          <Link href="#" color="inherit" className={classes.next}>
+          <Link
+            href="#"
+            color="inherit"
+            className={classes.next}
+            onClick={onNextClick}
+          >
             Next <TrendingFlatIcon className={classes.icon} />
           </Link>
         </Typography>
       </Box>
-      <Box>
-        <img
-          src={"https://via.placeholder.com/410x630"}
-          alt={"이호종"}
-          className={classes.photo}
-        />
+      <Box width={300} height={450} className={classes.photoBox}>
+        <img src={imageSrc} alt={name} className={classes.photo} />
       </Box>
     </Box>
   );

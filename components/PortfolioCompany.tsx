@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
     body2: {
       fontFamily: "Noto Serif KR",
       fontSize: 12,
+      height: 70,
       whiteSpace: "pre-line",
     },
     button: {
@@ -56,7 +57,7 @@ export default function PortfolioCompany({
           <img src={imageSrc} alt={name} className={classes.logo} />
         </Box>
       </Box>
-      <Box width="100%" mb={4} display="flex">
+      <Box width="100%" mb={1.5} display="flex">
         <Box alignSelf="center">
           <Typography
             variant="body2"
