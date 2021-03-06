@@ -84,6 +84,7 @@ export default function Index() {
         <FullPage
           afterChange={afterChange}
           beforeChange={beforeChange}
+          duration={1200}
           ref={fullPageRef}
         >
           <Slide>
