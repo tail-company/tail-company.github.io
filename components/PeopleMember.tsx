@@ -16,25 +16,50 @@ interface PeopleMemberProps {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     body1: {
-      fontSize: 12,
-      height: 95,
-      marginBottom: theme.spacing(6),
+      fontSize: 10.5,
+      height: (95 * 10.5) / 12,
+      marginBottom: theme.spacing(4),
       whiteSpace: "pre-line",
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 12,
+        height: 95,
+        marginBottom: theme.spacing(5),
+      },
+      [theme.breakpoints.up("md")]: {
+        marginBottom: theme.spacing(6),
+      },
     },
     body2: {
-      fontSize: 16,
+      fontSize: 16 * 0.75,
       fontWeight: "bold",
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 16,
+      },
     },
     h3: {
-      fontSize: 18,
+      fontSize: 18 * 0.75,
       fontWeight: "bold",
-      marginTop: theme.spacing(4),
+      marginTop: theme.spacing(2),
       marginBottom: theme.spacing(0.5),
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 18,
+        marginTop: theme.spacing(3),
+      },
+      [theme.breakpoints.up("md")]: {
+        marginTop: theme.spacing(4),
+      },
     },
     h4: {
-      fontSize: 18,
+      fontSize: 18 * 0.75,
       fontWeight: "bold",
-      marginBottom: theme.spacing(4),
+      marginBottom: theme.spacing(2),
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 18,
+        marginBottom: theme.spacing(3),
+      },
+      [theme.breakpoints.up("md")]: {
+        marginBottom: theme.spacing(4),
+      },
     },
     icon: {
       verticalAlign: "middle",
@@ -55,8 +80,21 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "100%",
     },
     photoBox: {
-      marginBottom: theme.spacing(2),
-      marginLeft: theme.spacing(4),
+      height: 450 * 0.75 * 0.65,
+      marginBottom: theme.spacing(2 * 0.5 * 1),
+      marginLeft: theme.spacing(3),
+      width: 300 * 0.75 * 0.65,
+      [theme.breakpoints.up("sm")]: {
+        height: 450 * 0.75,
+        marginBottom: theme.spacing(2 * 0.5),
+        marginLeft: theme.spacing(4),
+        width: 300 * 0.75,
+      },
+      [theme.breakpoints.up("md")]: {
+        height: 450,
+        marginBottom: theme.spacing(2),
+        width: 300,
+      },
     },
   })
 );
@@ -91,6 +129,7 @@ export default function PeopleMember({
             onClick={onPrevClick}
           >
             <TrendingFlatIcon
+              fontSize="inherit"
               className={clsx(classes.icon, classes.iconPrev)}
             />{" "}
             Prev
@@ -102,11 +141,12 @@ export default function PeopleMember({
             className={classes.next}
             onClick={onNextClick}
           >
-            Next <TrendingFlatIcon className={classes.icon} />
+            Next{" "}
+            <TrendingFlatIcon fontSize="inherit" className={classes.icon} />
           </Link>
         </Typography>
       </Box>
-      <Box width={300} height={450} className={classes.photoBox}>
+      <Box className={classes.photoBox}>
         <img src={imageSrc} alt={name} className={classes.photo} />
       </Box>
     </Box>

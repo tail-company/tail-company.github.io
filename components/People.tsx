@@ -23,9 +23,12 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     h2: {
-      fontSize: 72 * 0.75 * 0.65,
+      fontSize: 72 * 0.5 * 0.5,
+      [theme.breakpoints.only("xs")]: {
+        marginBottom: theme.spacing(3),
+      },
       [theme.breakpoints.up("sm")]: {
-        fontSize: 72 * 0.75,
+        fontSize: 72 * 0.5,
       },
       [theme.breakpoints.up("md")]: {
         fontSize: 72,
@@ -92,14 +95,14 @@ export default function People() {
     e.preventDefault();
     e.stopPropagation();
 
-    if (memberIndex > 0) setMemberIndex(memberIndex - 1);
+    setMemberIndex((memberIndex - 1 + memberList.length) % memberList.length);
   };
 
   const onNextClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     e.stopPropagation();
 
-    if (memberIndex < memberList.length - 1) setMemberIndex(memberIndex + 1);
+    setMemberIndex((memberIndex + 1) % memberList.length);
   };
 
   return (
@@ -122,24 +125,44 @@ export default function People() {
         </Box>
         <Box flexGrow={1} height={0} alignItems="center">
           <Box width="100%" height="100%" display="flex" alignItems="center">
-            <Box
-              width="100%"
-              display="flex"
-              justifyContent="flex-end"
-              className={classes.content}
-            >
-              <Box className={classes.desc}>
-                <Typography variant="h2" className={classes.h2}>
-                  Medical
-                  <br />
-                  Doctors
-                  <br />
-                  <strong>
-                    Entrepreneurship<span className="yellow">.</span>
-                  </strong>
-                </Typography>
+            <Hidden smUp>
+              <Box width="100%" display="flex" justifyContent="flex-end">
+                <Box alignSelf="center">
+                  <Typography variant="h2" align="right" className={classes.h2}>
+                    Medical Doctors{" "}
+                    <strong>
+                      Entrepreneurship<span className="yellow">.</span>
+                    </strong>
+                  </Typography>
+                  <PeopleMember
+                    name={memberList[memberIndex].name}
+                    position={memberList[memberIndex].position}
+                    career={memberList[memberIndex].career}
+                    imageSrc={memberList[memberIndex].imageSrc}
+                    onPrevClick={onPrevClick}
+                    onNextClick={onNextClick}
+                  />
+                </Box>
               </Box>
-              <Hidden xsDown>
+            </Hidden>
+            <Hidden xsDown>
+              <Box
+                width="100%"
+                display="flex"
+                justifyContent="flex-end"
+                className={classes.content}
+              >
+                <Box className={classes.desc}>
+                  <Typography variant="h2" className={classes.h2}>
+                    Medical
+                    <br />
+                    Doctors
+                    <br />
+                    <strong>
+                      Entrepreneurship<span className="yellow">.</span>
+                    </strong>
+                  </Typography>
+                </Box>
                 <Box alignSelf="center">
                   <PeopleMember
                     name={memberList[memberIndex].name}
@@ -150,8 +173,8 @@ export default function People() {
                     onNextClick={onNextClick}
                   />
                 </Box>
-              </Hidden>
-            </Box>
+              </Box>
+            </Hidden>
           </Box>
         </Box>
       </Box>

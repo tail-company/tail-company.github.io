@@ -7,11 +7,8 @@ import FullPageSlide from "components/FullPageSlide";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     caption: {
-      fontSize: 14 * 0.75 * 0.65,
+      fontSize: 14 * 0.75,
       [theme.breakpoints.up("sm")]: {
-        fontSize: 14 * 0.75,
-      },
-      [theme.breakpoints.up("md")]: {
         fontSize: 14,
       },
     },

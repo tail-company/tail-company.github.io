@@ -14,11 +14,11 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     h2: {
-      fontSize: 68 * 0.75 * 0.65,
-      marginBottom: theme.spacing(6 * 0.75 * 0.65),
+      fontSize: 27,
+      marginBottom: theme.spacing((6 * 27) / 68),
       [theme.breakpoints.up("sm")]: {
-        fontSize: 68 * 0.75,
-        marginBottom: theme.spacing(6 * 0.75),
+        fontSize: 44,
+        marginBottom: theme.spacing((6 * 44) / 68),
       },
       [theme.breakpoints.up("md")]: {
         fontSize: 68,
@@ -96,7 +96,7 @@ export default function Portfolio() {
                 </Typography>
               </Grid>
               {[...Array(companyList.length).keys()].map((companyIndex) => (
-                <Grid item xs={12} sm={6} md={4} key={companyIndex}>
+                <Grid item xs={6} md={4} key={companyIndex}>
                   <Box
                     width="100%"
                     height="100%"
