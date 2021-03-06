@@ -8,26 +8,27 @@ import FullPageSlide from "components/FullPageSlide";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     body1: {
-      fontSize: 20,
+      fontSize: 15,
+      paddingBottom: theme.spacing(2),
     },
     h1: {
-      fontSize: 25,
+      fontSize: 19,
     },
     h2: {
-      fontSize: 115,
+      fontSize: 86,
     },
     h3: {
-      fontSize: 83,
+      fontSize: 62,
     },
     h3Postposition: {
-      fontSize: 37,
+      fontSize: 28,
     },
     root: {
       position: "relative",
     },
     title: {
       position: "absolute",
-      top: theme.spacing(3),
+      top: theme.spacing(2),
       right: 0,
     },
   })
@@ -57,7 +58,7 @@ export default function About() {
         <Box flexGrow={1} height={0} alignItems="center">
           <Box width="100%" height="100%" display="flex" alignItems="center">
             <Grid container spacing={0}>
-              <Grid item xs={6}>
+              <Grid item md={6}>
                 <Box width="100%" height="100%" display="flex">
                   <Box alignSelf="center">
                     <Typography variant="h2" className={classes.h2}>
@@ -76,7 +77,7 @@ export default function About() {
                   </Box>
                 </Box>
               </Grid>
-              <Grid item xs={6}>
+              <Grid item md={6}>
                 <Box
                   width="100%"
                   height="100%"

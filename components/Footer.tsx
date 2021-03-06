@@ -16,8 +16,12 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingRight: 0,
     },
     copyright: {
-      width: "100%",
+      fontSize: 10.5,
       fontWeight: "bold",
+      width: "100%",
+    },
+    toolbar: {
+      minHeight: 48,
     },
   })
 );
@@ -34,7 +38,7 @@ export default function Footer() {
         className={classes.appBar}
       >
         <Container maxWidth="lg" className={classes.container}>
-          <Toolbar>
+          <Toolbar className={classes.toolbar}>
             <Typography
               variant="body2"
               align="center"

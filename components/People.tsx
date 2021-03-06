@@ -17,10 +17,10 @@ const useStyles = makeStyles((theme: Theme) =>
       zIndex: -1,
     },
     h1: {
-      fontSize: 25,
+      fontSize: 19,
     },
     h2: {
-      fontSize: 96,
+      fontSize: 72,
     },
     root: {
       position: "relative",
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       position: "absolute",
       right: 0,
-      top: theme.spacing(3),
+      top: theme.spacing(2),
     },
   })
 );

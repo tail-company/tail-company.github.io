@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "transparent",
     },
     menu: {
-      fontSize: 20,
+      fontSize: 15,
       fontWeight: "bold",
       textTransform: "none",
     },
@@ -39,10 +39,10 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       cursor: "pointer",
       flexGrow: 1,
-      fontSize: 40,
+      fontSize: 30,
     },
     toolbar: {
-      minHeight: 100,
+      minHeight: 75,
     },
   })
 );

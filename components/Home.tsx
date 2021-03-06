@@ -7,15 +7,15 @@ import FullPageSlide from "components/FullPageSlide";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     h1: {
-      fontSize: 133,
-      marginBottom: theme.spacing(4),
+      fontSize: 100,
+      marginBottom: theme.spacing(3),
     },
     h2: {
-      fontSize: 45,
+      fontSize: 34,
       marginBottom: theme.spacing(6),
     },
     caption: {
-      fontSize: 19,
+      fontSize: 14,
     },
   })
 );

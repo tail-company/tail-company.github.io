@@ -14,15 +14,16 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     body2: {
       fontFamily: "Noto Serif KR",
-      fontSize: 16,
+      fontSize: 12,
+      whiteSpace: "pre-line",
     },
     button: {
       backgroundColor: "#f8e00e",
       borderRadius: 0,
       color: theme.palette.common.black,
-      fontSize: 16,
-      paddingTop: theme.spacing(1.5),
-      paddingBottom: theme.spacing(1.5),
+      fontSize: 12,
+      paddingTop: theme.spacing(1),
+      paddingBottom: theme.spacing(1),
       paddingLeft: theme.spacing(3),
       paddingRight: theme.spacing(3),
     },
@@ -44,12 +45,18 @@ export default function PortfolioCompany({
 
   return (
     <Box>
-      <Box width="100%" height={150} display="flex" justifyContent="center">
+      <Box
+        width="100%"
+        height={150}
+        mb={2}
+        display="flex"
+        justifyContent="center"
+      >
         <Box alignSelf="center" width="100%" height="100%" position="relative">
           <img src={imageSrc} alt={name} className={classes.logo} />
         </Box>
       </Box>
-      <Box width="100%" height={150} display="flex">
+      <Box width="100%" mb={4} display="flex">
         <Box alignSelf="center">
           <Typography
             variant="body2"

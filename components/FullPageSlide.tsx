@@ -7,8 +7,11 @@ const useStyles = makeStyles((theme: Theme) =>
     spacer: {
       height: 1,
     },
+    toolbarBottom: {
+      minHeight: 48,
+    },
     toolbarTop: {
-      minHeight: 100,
+      minHeight: 75,
     },
   })
 );
@@ -26,7 +29,7 @@ export default function FullPageSlide(props) {
       </Box>
       <Box>
         <div className={classes.spacer} />
-        <Toolbar />
+        <Toolbar className={classes.toolbarBottom} />
       </Box>
     </Box>
   );

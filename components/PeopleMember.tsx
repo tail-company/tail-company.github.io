@@ -11,18 +11,23 @@ interface PeopleMemberProps {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     body1: {
-      fontSize: 21,
+      fontSize: 16,
       fontWeight: "bold",
     },
     body2: {
-      fontSize: 16,
+      fontSize: 12,
       marginBottom: theme.spacing(6),
     },
     h3: {
-      fontSize: 24,
+      fontSize: 18,
+      fontWeight: "bold",
+      marginTop: theme.spacing(4),
+      marginBottom: theme.spacing(0.5),
+    },
+    h4: {
+      fontSize: 18,
       fontWeight: "bold",
       marginBottom: theme.spacing(4),
-      marginTop: theme.spacing(4),
     },
     icon: {
       verticalAlign: "middle",
@@ -38,7 +43,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     photo: {
       // float: "right",
-      paddingBottom: theme.spacing(3),
+      paddingBottom: theme.spacing(2),
       paddingLeft: theme.spacing(4),
     },
   })
@@ -52,14 +57,15 @@ export default function PeopleMember({}: PeopleMemberProps) {
       <Box>
         <Typography variant="h3" align="right" className={classes.h3}>
           <span className="ko">이호종</span>
-          <br />
+        </Typography>
+        <Typography variant="h4" align="right" className={classes.h4}>
           Managing Partner
         </Typography>
         <Typography variant="body2" align="right" className={classes.body2}>
           <span className="ko">
             맥스웰피부과 원장
             <br />
-            SNU 의료빅데이터센터
+            서울대 의료빅데이터센터
             <br />
             라임소사이어티 Founder
             <br />
