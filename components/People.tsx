@@ -68,9 +68,11 @@ const memberList = [
   },
   {
     name: "배영진",
-    position: "Venture Partner",
+    /*position: "Venture Partner",
     career:
-      "(현)LINE Games CSO\n(전)NextFloor CFO\n(LINE Games 인수)\n(전)MobilFactory Founder\n(NextFloor 인수)",
+      "(현)LINE Games CSO\n(전)NextFloor CFO\n(LINE Games 인수)\n(전)MobilFactory Founder\n(NextFloor 인수)",*/
+    position: "Advisor",
+    career: "LINE Games CSO/부대표",
     imageSrc: "/photo-bae.jpg",
   },
   {
