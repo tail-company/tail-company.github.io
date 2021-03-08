@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme: Theme) =>
     body2: {
       fontSize: 16 * 0.75,
       fontWeight: "bold",
+      [theme.breakpoints.only("xs")]: {
+        paddingLeft: theme.spacing(2),
+      },
       [theme.breakpoints.up("sm")]: {
         fontSize: 16,
       },
