@@ -87,6 +87,18 @@ const memberList = [
     career: "Legend Capital MD",
     imageSrc: "/photo-parkjs.jpg",
   },
+  {
+    name: "강병희",
+    position: "Advisor",
+    career: "서울대 의과학과 생화학교실 박사\n서울대 의학전문대학원",
+    imageSrc: "/photo-bh.jpg",
+  },
+  {
+    name: "이승복",
+    position: "Advisor",
+    career: "서울대 의과학과 생화학교실 박사\n서울대 의학과",
+    imageSrc: "/photo-sb.png",
+  },
 ];
 
 export default function People() {
