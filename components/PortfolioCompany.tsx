@@ -88,7 +88,7 @@ export default function PortfolioCompany({
             href={urlSrc}
             target="_blank"
           >
-            Download
+            Homepage
           </Button>
         </Box>
       </Hidden>
