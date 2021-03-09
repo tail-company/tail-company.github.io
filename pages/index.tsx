@@ -1,5 +1,6 @@
 import { Container } from "@material-ui/core";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 import React, { useRef, useState } from "react";
 import { FullPage, Slide } from "react-full-page";
 import type _KeyboardEventHandler from "react-keyboard-event-handler";
@@ -65,6 +66,17 @@ export default function Index() {
 
   return (
     <>
+      <Head>
+        <meta property="og:title" content="TAIL: The Art Is Long" />
+        <meta
+          property="og:description"
+          content="First investor to medical startup."
+        />
+        <meta
+          property="og:image"
+          content="https://tail.company/open-graph-image.png?v=1"
+        />
+      </Head>
       <KeyboardEventHandler
         handleKeys={[
           "pageup",
