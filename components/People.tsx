@@ -88,6 +88,13 @@ const memberList = [
     imageSrc: "/photo-parkjs.jpg",
   },
   {
+    name: "안상진",
+    position: "Advisor",
+    career:
+      "인제대학교 의학과 약리학교실 조교수\n서울대 의과학과 약리학 박사\n서울대 의학과",
+    imageSrc: "/photo-mahler83.jpg",
+  },
+  {
     name: "강병희",
     position: "Advisor",
     career: "서울대 의과학과 생화학교실 박사\n서울대 의학전문대학원",
