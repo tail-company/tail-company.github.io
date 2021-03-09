@@ -57,7 +57,7 @@ const memberList = [
     position: "Managing Partner",
     career:
       "(현)맥스웰피부과 원장\n(현)서울대 의료빅데이터센터\n(전)라임소사이어티 Founder\n(전)무브 CTO\n서울대 의학과 및 대학원",
-    imageSrc: "/photo-hojong.jpg",
+    imageSrc: "/photo-hojong.png",
   },
   {
     name: "지승범",
