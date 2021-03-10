@@ -91,14 +91,14 @@ const memberList = [
     name: "이형철",
     position: "Advisor",
     career:
-      "서울대 마취통증의학과 조교수\n서울대 의과학과 마취통증의학 박사\n서울대 의학과\n서울대 공과대학",
+      "서울대 마취통증의학과 조교수\n서울대 의과학과 마취통증의학 박사\n서울대 의학과\n서울대 공과대학\nVital Recorder 개발",
     imageSrc: "/photo-lucid80.jpg",
   },
   {
     name: "안상진",
     position: "Advisor",
     career:
-      "인제대 의학과 약리학교실 조교수\n서울대 의과학과 약리학 박사\n서울대 의학과",
+      "인제대 의학과 약리학교실 조교수\n서울대 의과학과 약리학 박사\n서울대 의학과\n트윗매니저 개발",
     imageSrc: "/photo-mahler83.jpg",
   },
   {
