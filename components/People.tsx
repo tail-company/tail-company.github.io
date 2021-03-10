@@ -88,22 +88,29 @@ const memberList = [
     imageSrc: "/photo-parkjs.jpg",
   },
   {
+    name: "이형철",
+    position: "Advisor",
+    career:
+      "서울대 마취통증의학과 조교수\n서울대 의과학과 마취통증의학 박사\n서울대 의학과\n서울대 공과대학",
+    imageSrc: "/photo-lucid80.jpg",
+  },
+  {
     name: "안상진",
     position: "Advisor",
     career:
-      "인제대학교 의학과 약리학교실 조교수\n서울대 의과학과 약리학 박사\n서울대 의학과",
+      "인제대 의학과 약리학교실 조교수\n서울대 의과학과 약리학 박사\n서울대 의학과",
     imageSrc: "/photo-mahler83.jpg",
   },
   {
     name: "강병희",
     position: "Advisor",
-    career: "서울대 의과학과 생화학교실 박사\n서울대 의학전문대학원",
+    career: "서울대 의과학과 생화학 박사\n서울대 의학전문대학원",
     imageSrc: "/photo-bh.jpg",
   },
   {
     name: "이승복",
     position: "Advisor",
-    career: "서울대 의과학과 생화학교실 박사\n서울대 의학과",
+    career: "서울대 의과학과 생화학 박사\n서울대 의학과",
     imageSrc: "/photo-sb.png",
   },
 ];
