@@ -67,6 +67,12 @@ const memberList = [
     imageSrc: "/photo-jayji.png",
   },
   {
+    name: "배남석",
+    position: "Auditor/Compliance Officer",
+    career: "(전)BNK 부산은행 부행장\n(전)BNK 신용정보 대표이사",
+    imageSrc: "/photo-namseok.jpg",
+  },
+  {
     name: "배영진",
     /*position: "Venture Partner",
     career:
