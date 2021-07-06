@@ -67,6 +67,12 @@ const memberList = [
     imageSrc: "/photo-jayji.png",
   },
   {
+    name: "김승수",
+    position: "Partner",
+    career: "(현)미유치과 원장\n서울대 치의학대학원 석사",
+    imageSrc: "/photo-seungsu.png",
+  },
+  {
     name: "배남석",
     position: "Auditor/Compliance Officer",
     career: "(전)BNK 부산은행 부행장\n(전)BNK 신용정보 대표이사",
