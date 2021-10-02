@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
-import { fade } from "@material-ui/core/styles/colorManipulator";
+import { alpha } from "@material-ui/core/styles/colorManipulator";
 import clsx from "clsx";
 import React from "react";
 
@@ -18,8 +18,8 @@ interface HeaderProps {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     appBar: {
-      //backgroundColor: fade(theme.palette.common.white, 0.1),
-      backgroundColor: fade(theme.palette.common.white, 1),
+      //backgroundColor: alpha(theme.palette.common.white, 0.1),
+      backgroundColor: alpha(theme.palette.common.white, 1),
     },
     container: {
       paddingLeft: 0,
