@@ -6,7 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "export": "next export -o docs",
-    "server": "python3 -m http.server -d docs",
+    "server": "python -m http.server -d docs",
     "start": "next start"
   },
   "dependencies": {

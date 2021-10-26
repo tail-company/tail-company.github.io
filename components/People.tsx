@@ -80,9 +80,6 @@ const memberList = [
   },
   {
     name: "배영진",
-    /*position: "Venture Partner",
-    career:
-      "(현)LINE Games CSO\n(전)NextFloor CFO\n(LINE Games 인수)\n(전)MobilFactory Founder\n(NextFloor 인수)",*/
     position: "Advisor",
     career: "LINE Games CSO/부대표",
     imageSrc: "/photo-bae.jpg",
@@ -92,12 +89,6 @@ const memberList = [
     position: "Advisor",
     career: "Korea/NY Lawyer",
     imageSrc: "/photo-jjyslee.png",
-  },
-  {
-    name: "박준성",
-    position: "Advisor",
-    career: "Legend Capital MD",
-    imageSrc: "/photo-parkjs.jpg",
   },
   {
     name: "이형철",
