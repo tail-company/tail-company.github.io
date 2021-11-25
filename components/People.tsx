@@ -85,12 +85,6 @@ const memberList = [
     imageSrc: "/photo-bae.jpg",
   },
   {
-    name: "이용수",
-    position: "Advisor",
-    career: "Korea/NY Lawyer",
-    imageSrc: "/photo-jjyslee.png",
-  },
-  {
     name: "이형철",
     position: "Advisor",
     career:
